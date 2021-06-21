@@ -1,0 +1,9 @@
+h1 {
+  font-family: serif;
+  font-style: normal;
+  color: brown;
+  font-size: 50px;
+  line-height: 1.1;
+  border-bottom: 4px solid blue;
+  display: inline-block;
+}
