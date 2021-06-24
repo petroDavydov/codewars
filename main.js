@@ -390,3 +390,59 @@
 // console.log(validatePIN("1234")); //true, "Wrong output for '1234'");
 // console.log(validatePIN("1234567")); //false, "Wrong output for '1234567'")
 // console.log(validatePIN("-1.234")); //false, "Wrong output for '-1.234'")
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+// function digital_root(n) {
+//   // console.log(String(n).split('').reduce((acc, el) => +acc + + el));
+//   const number = String(n)
+//     .split("")
+//     .reduce((acc, el) => +acc + +el, 0);
+//   //   console.log(number);
+//   let sum = 0;
+
+//   if (number > 9) {
+//     sum = String(number)
+//       .split("")
+//       .reduce((acc, el) => +acc + +el, 0);
+//     return +sum;
+//   } else {
+//     return +number;
+//   }
+// }
+//   xxxxxxxxxxxxxxx 2 variant xxxxxxxxxxxxxxxxxx
+// const digital_root = n => {
+//   return n !== 0 && n % 9 === 0 ? 9 : n % 9;
+// };
+
+// console.log(digital_root(16)); //7 ) 16  -->  1 + 6 = 7
+// console.log(digital_root(456)); // 6  )942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+// console.log(digital_root(228));
+// console.log(digital_root(0));
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
