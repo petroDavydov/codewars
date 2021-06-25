@@ -422,27 +422,110 @@
 // console.log(digital_root(228));
 // console.log(digital_root(0));
 
-
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+// You are given an array(which will have a length of at least 3, but could be very large) containing integers.The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N.Write a method that takes the array  as an argument and returns this "outlier" N.
 
+// function findOutlier(integers) {
+//   const oddArray = [];
+//   const evenArray = [];
+//   for (let integer of integers) {
+//     if (integer % 2 === 0) {
+//       evenArray.push(integer);
+//     } else {
+//       oddArray.push(integer);
+//     }
+//   }
+//   return oddArray.length === 1 ? oddArray[0] : evenArray[0];
+// }
 
+// console.log(findOutlier([0, 1, 2])); // 1;
+// console.log(findOutlier([1, 2, 3])); // 2;
+// console.log(findOutlier([2, 6, 8, 10, 3])); //3;
+// console.log(findOutlier([0, 0, 3, 0, 0])); // 3,
+// console.log(findOutlier([1, 1, 0, 1, 1])); //0);
 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+// Create a function that returns the name of the winner in a fight between two fighters.
 
+// Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
 
+// Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
 
+// Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
 
+// function Fighter(name, health, damagePerAttack) {
+// 	this.name = name;
+// 	this.health = health;
+// 	this.damagePerAttack = damagePerAttack;
+// 	this.toString = function () {
+// 	  return this.name;
+// 	};
+//   }
+//   const declareWinner = (fighter1, fighter2, firstAttacker) => {
+// 	const a = [fighter1, fighter2].find((v) => v.name === firstAttacker);
+// 	const b = [fighter1, fighter2].find((v) => v.name !== firstAttacker);
 
+// 	return Math.ceil(b.health / a.damagePerAttack) <= Math.ceil(a.health / b.damagePerAttack) ? a.name : b.name;
+//   };
 
+// console.log(
+//   declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"),
+//   "Lew"
+// );
 
+// console.log(
+//   declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Harry"),
+//   "Harry"
+// );
 
+// console.log(
+//   declareWinner(
+//     new Fighter("Harald", 20, 5),
+//     new Fighter("Harry", 5, 4),
+//     "Harry"
+//   ),
+//   "Harald"
+// );
 
+// console.log(
+//   declareWinner(
+//     new Fighter("Harald", 20, 5),
+//     new Fighter("Harry", 5, 4),
+//     "Harald"
+//   ),
+//   "Harald"
+// );
 
+// console.log(
+//   declareWinner(
+//     new Fighter("Jerry", 30, 3),
+//     new Fighter("Harald", 20, 5),
+//     "Jerry"
+//   ),
+//   "Harald"
+// );
 
+// console.log(
+//   declareWinner(
+//     new Fighter("Jerry", 30, 3),
+//     new Fighter("Harald", 20, 5),
+//     "Harald"
+//   ),
+//   "Harald"
+// );
 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+// всім перші букви перевести у верхній регістр
 
-
-
-
+String.prototype.toJadenCase = function () {
+  return this.split(" ")
+    .map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+};
+var str = "How can mirrors be real if our eyes aren't real";
+console.log(str.toJadenCase());
