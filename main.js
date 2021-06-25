@@ -520,12 +520,76 @@
 
 // всім перші букви перевести у верхній регістр
 
-String.prototype.toJadenCase = function () {
-  return this.split(" ")
-    .map(function (word) {
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    })
-    .join(" ");
-};
-var str = "How can mirrors be real if our eyes aren't real";
-console.log(str.toJadenCase());
+// String.prototype.toJadenCase = function () {
+//   return this.split(" ")
+//     .map(function (word) {
+//       return word.charAt(0).toUpperCase() + word.slice(1);
+//     })
+//     .join(" ");
+// };
+// var str = "How can mirrors be real if our eyes aren't real";
+// console.log(str.toJadenCase());
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// // Your task is to make function, which returns the sum of a sequence of integers.
+
+// // The sequence is defined by 3 non-negative values: begin, end, step.
+
+// // If begin value is greater than the end, function should returns 0
+
+// const sequenceSum = (begin, end, step) => {
+//   let total = 0;
+//   for (let i = begin; i <= end; i += step) {
+//     if (begin > end) {
+//       return 0;
+//     } else {
+//       total += i;
+//     }
+//   }
+//   return total;
+// };
+
+// console.log(sequenceSum(2, 2, 2)); //2
+// console.log(sequenceSum(2, 6, 2)); //12
+// console.log(sequenceSum(1, 5, 1)); //15
+// console.log(sequenceSum(1, 5, 3)); //5
+// console.log(sequenceSum(5, 0, 3)); //0
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits. For example:
+
+// function sumDigits(number) {
+//   return Math.abs(number)
+//     .toString()
+//     .split("")
+//     .reduce((acc, total) => +acc + +total, 0);
+// }
+
+// console.log(sumDigits(10)); //1
+// console.log(sumDigits(99)); //18
+// console.log(sumDigits(-32)); //5
+// console.log(sumDigits(256)); //5
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Count the number of divisors of a positive integer n.
+
+// Random tests go up to n = 500000.
+
+function getDivisorsCnt(n) {
+	let cnt = 0;
+    for(let i = 1; i <= n; i++){
+      if(!(n % i)) cnt++;
+    }
+    return cnt;
+ 
+}
+
+
+console.log(getDivisorsCnt(4)); //3 // 1, 2, 4
+console.log(getDivisorsCnt(5)); //2 // 1, 5
+console.log(getDivisorsCnt(12)); //6  // 1, 2, 3, 4, 6, 12
+console.log(getDivisorsCnt(30)); //8  // 1, 2, 3, 5, 6, 10, 15, 30
+console.log(getDivisorsCnt(500000)); // 42
