@@ -579,14 +579,12 @@
 // Random tests go up to n = 500000.
 
 function getDivisorsCnt(n) {
-	let cnt = 0;
-    for(let i = 1; i <= n; i++){
-      if(!(n % i)) cnt++;
-    }
-    return cnt;
- 
+  let cnt = 0;
+  for (let i = 1; i <= n; i++) {
+    if (!(n % i)) cnt++;
+  }
+  return cnt;
 }
-
 
 console.log(getDivisorsCnt(4)); //3 // 1, 2, 4
 console.log(getDivisorsCnt(5)); //2 // 1, 5
