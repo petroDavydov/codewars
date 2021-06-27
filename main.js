@@ -586,8 +586,70 @@ function getDivisorsCnt(n) {
   return cnt;
 }
 
-console.log(getDivisorsCnt(4)); //3 // 1, 2, 4
-console.log(getDivisorsCnt(5)); //2 // 1, 5
-console.log(getDivisorsCnt(12)); //6  // 1, 2, 3, 4, 6, 12
-console.log(getDivisorsCnt(30)); //8  // 1, 2, 3, 5, 6, 10, 15, 30
-console.log(getDivisorsCnt(500000)); // 42
+// console.log(getDivisorsCnt(4)); //3 // 1, 2, 4
+// console.log(getDivisorsCnt(5)); //2 // 1, 5
+// console.log(getDivisorsCnt(12)); //6  // 1, 2, 3, 4, 6, 12
+// console.log(getDivisorsCnt(30)); //8  // 1, 2, 3, 5, 6, 10, 15, 30
+// console.log(getDivisorsCnt(500000)); // 42
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Given an integer as input, can you round it to the
+// next (meaning, "higher") multiple of 5?
+
+// Учитывая целое число в качестве входных данных,
+//  можете ли вы округлить его до следующего
+//   (то есть «большего») кратного 5?
+
+// function roundToNext5(n) {
+//   return Math.ceil(n / 5) * 5;
+// }
+
+// console.log(roundToNext5(2)); //5
+// console.log(roundToNext5(3)); //5
+// console.log(roundToNext5(-2)); //0
+// console.log(roundToNext5(-5)); //-5
+// console.log(roundToNext5(30)); //30
+// console.log(roundToNext5(21)); //25
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+// For example, if this array were passed as an argument:
+
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+
+// Your function would return the following array:
+
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
+
+// function sortByLength (array) {
+// 	return array.sort((a, b) => a.length - b.length);
+//   };
+
+//   console.log(sortByLength(["Beg", "Life", "I", "To"])); //["I", "To", "Beg", "Life"]
+//   console.log(sortByLength(["", "Moderately", "Brains", "Pizza"])); // ["", "Pizza", "Brains", "Moderately"]
+//   console.log(sortByLength(["Longer", "Longest", "Short"])); // ["Short", "Longer", "Longest"]
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+//* Your task is to write function findSum.
+// Upto and including n, this function will return the sum of all multiples of 3 and 5.
+// For example:
+// findSum(5) should return 8 (3 + 5)
+// findSum(10) should return 33 (3 + 5 + 6 + 9 + 10)
+
+function findSum(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      total += i;
+    }
+  }
+  return total;
+}
+console.log(findSum(5)); //8
+console.log(findSum(10)); //33
