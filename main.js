@@ -578,13 +578,13 @@
 
 // Random tests go up to n = 500000.
 
-function getDivisorsCnt(n) {
-  let cnt = 0;
-  for (let i = 1; i <= n; i++) {
-    if (!(n % i)) cnt++;
-  }
-  return cnt;
-}
+// function getDivisorsCnt(n) {
+//   let cnt = 0;
+//   for (let i = 1; i <= n; i++) {
+//     if (!(n % i)) cnt++;
+//   }
+//   return cnt;
+// }
 
 // console.log(getDivisorsCnt(4)); //3 // 1, 2, 4
 // console.log(getDivisorsCnt(5)); //2 // 1, 5
@@ -642,14 +642,117 @@ function getDivisorsCnt(n) {
 // findSum(5) should return 8 (3 + 5)
 // findSum(10) should return 33 (3 + 5 + 6 + 9 + 10)
 
-function findSum(n) {
-  let total = 0;
-  for (let i = 1; i <= n; i++) {
-    if (i % 3 === 0 || i % 5 === 0) {
-      total += i;
-    }
-  }
-  return total;
-}
-console.log(findSum(5)); //8
-console.log(findSum(10)); //33
+// function findSum(n) {
+//   let total = 0;
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//       total += i;
+//     }
+//   }
+//   return total;
+// }
+// console.log(findSum(5)); //8
+// console.log(findSum(10)); //33
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them.
+
+// a and b will both be positive integers, and a will always be the first number in the operation, and b always the second.
+
+// The four operators are "add", "subtract", "divide", "multiply".
+
+// function arithmetic(a, b, operator) {
+//   if (operator === "add") {
+//     return a + b;
+//   }
+
+//   if (operator === "subtract") {
+//     return a - b;
+//   }
+
+//   if (operator === "multiply") {
+//     return a * b;
+//   }
+
+//   if (operator === "divide") {
+//     return a / b;
+//   }
+// }
+
+// function arithmetic(a, b, operator){
+// 	switch(operator) {
+// 	  case 'add':
+// 		return a + b;
+// 	  case 'subtract':
+// 		return a - b;
+// 	  case 'multiply':
+// 		return a * b;
+// 	  case 'divide':
+// 		return a / b;
+// 	}
+//   }
+
+// console.log(arithmetic(1, 2, "add")); //3
+// console.log(arithmetic(8, 2, "subtract")); //6
+// console.log(arithmetic(5, 2, "multiply")); //10
+// console.log(arithmetic(8, 2, "divide")); //4
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
+
+// Учитывая список цифр, верните наименьшее число, которое может быть образовано из этих цифр, используя цифры только один раз (игнорируйте дубликаты).
+
+// function minValue(values){
+// 	const num = [...values].sort().filter((val, index,array)=>array.indexOf(val) ===index).join``
+// 	return Number(num)
+// }
+
+//   console.log(minValue([1, 3, 1])) //13);
+//   console.log(minValue([4, 7, 5, 7])) //457);
+//   console.log(minValue([4, 8, 1, 4])) //148);
+//   console.log(minValue([5, 7, 9, 5, 7])) // 579);
+//   console.log(minValue([6, 7, 8, 7, 6, 6])) //678);
+//   console.log(minValue([5, 6, 9, 9, 7, 6, 4])) // 45679);
+//   console.log(minValue([1, 9, 1, 3, 7, 4, 6, 6, 7])) // 134679);
+//   console.log(minValue([3, 6, 5, 5, 9, 8, 7, 6, 3, 5, 9])) // 356789);
+//   console.log(minValue([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])) // 1);
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+
+// Тролли атакуют ваш раздел комментариев!
+
+// Обычный способ справиться с этой ситуацией - удалить все гласные из комментариев троллей, нейтрализуя угрозу.
+
+// Ваша задача - написать функцию, которая принимает строку и возвращает новую строку с удаленными гласными.
+
+// Например, строка «Этот сайт для неудачников LOL!» станет "Ths wbst s fr lsrs LL!".
+
+// Примечание: для этого ката y не считается гласным.
+
+// function disemvowel(str) {
+// 	return str.split('').filter(val=> !(/^[aeiou]$/i).test(val)).join``
+//   }
+
+// ===2 variant===
+
+// function disemvowel(str) {
+// 	return str.replace(/[aeiou]/gi, '');
+//   }
+
+//   console.log(disemvowel("This website is for losers LOL!")); // "Ths wbst s fr lsrs LL!")
+//   console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read")) // "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
+//   console.log(disemvowel("What are you, a communist?")) // "Wht r y,  cmmnst?")
+
+
