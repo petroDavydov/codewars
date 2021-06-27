@@ -20,27 +20,27 @@
 //*Example
 // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 
-// function countPositivesSumNegatives(input) {
-//   const answer = [];
+function countPositivesSumNegatives(input) {
+  const answer = [];
 
-//   let pos = 0;
-//   let neg = 0;
+  let pos = 0;
+  let neg = 0;
 
-//   if (input && input.length) {
-//     for (let i = 0; i < input.length; i += 1) {
-//       if (input[i] > 0) {
-//         pos += 1;
-//       } else {
-//         neg += input[i];
-//       }
-//     }
-//     answer.push(pos);
-//     answer.push(neg);
-//   }
-//   return answer;
-// }
+  if (input && input.length) {
+    for (let i = 0; i < input.length; i += 1) {
+      if (input[i] > 0) {
+        pos += 1;
+      } else {
+        neg += input[i];
+      }
+    }
+    answer.push(pos);
+    answer.push(neg);
+  }
+  return answer;
+}
 
-//! reduce
+// //! reduce
 
 // function countPositivesSumNegatives(input) {
 //   return input && input.length
@@ -74,7 +74,7 @@
 //   ])
 // );
 
-//! Проверка на масив
+// ! Проверка на масив
 // let arr = [];
 // console.log(Array.isArray(arr));
 // let dublicate = (arr) => [...arr, ...arr];
@@ -360,7 +360,7 @@
 //   const strArr1 = s2.split("");
 //   return [...strArr, ...strArr1]
 //     .sort()
-//     .filter((el, index, array) => array.indexOf(el) === index)
+// .filter((el, index, array) => array.indexOf(el) === index)
 //     .join("");
 // }
 
@@ -755,4 +755,66 @@
 //   console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read")) // "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
 //   console.log(disemvowel("What are you, a communist?")) // "Wht r y,  cmmnst?")
 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+// Scenario
+// Several people are standing in a row divided into two teams.
+// The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
+
+// Task
+// Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+
+// Notes
+// Array size is at least 1.
+// All numbers will be positive.
+// Input >> Output Examples
+// rowWeights([13, 27, 49])  ==>  return (62, 27)
+// Explanation:
+// The first element 62 is the total weight of team 1, and the second element 27 is the total weight of team 2.
+
+// rowWeights([50, 60, 70, 80])  ==>  return (120, 140)
+// Explanation:
+// The first element 120 is the total weight of team 1, and the second element 140 is the total weight of team 2.
+
+// rowWeights([80])  ==>  return (80, 0)
+// Explanation:
+// The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
+
+// function rowWeights(array) {
+
+// 	let t1 = 0;
+// 	let t2 = 0;
+// 	for (let i = 0; i < array.length; i++) {
+// 	  if (i % 2 === 0) {
+// 		t1 += array[i];
+// 	  } else {
+// 		t2 += array[i];
+// 	  }
+// 	}
+// 	return [t1, t2];
+
+//   }
+
+// rowWeights=arr=>arr.reduce((a,b,i)=>(a[i%2]+=b,a),[0,0])
+
+// console.log(rowWeights([80])); // [80,0]);
+// console.log(rowWeights([100, 50])); // [100,50]);
+// console.log(rowWeights([50, 60, 70, 80])); // [120,140]);
+// console.log(rowWeights([13, 27, 49])); // [62,27]);
+// console.log(rowWeights([70, 58, 75, 34, 91])); // [236,92]);
+// console.log(rowWeights([29, 83, 67, 53, 19, 28, 96])); // [211,164]);
+// console.log(rowWeights([0])); // [0,0]);
+// console.log(rowWeights([100, 51, 50, 100])); // [150,151]);
+// console.log(rowWeights([39, 84, 74, 18, 59, 72, 35, 61])); // [207,235]);
+// console.log(rowWeights([0, 1, 0])); // [0,1]);
+
+
+
+let value = 9;
+const obj = {};
+
+obj:{
+	value: ++value;
+}
+ const result = obj.value + value
+// answer: NaN
