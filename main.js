@@ -808,13 +808,18 @@ function countPositivesSumNegatives(input) {
 // console.log(rowWeights([39, 84, 74, 18, 59, 72, 35, 61])); // [207,235]);
 // console.log(rowWeights([0, 1, 0])); // [0,1]);
 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
-let value = 9;
-const obj = {};
+// function solution(str, ending){
+//  // Первое решение
+// // return str.indexOf(ending, str.length - ending.length) !== -1;
+// // второе решение
+// return str.endsWith(ending);
 
-obj:{
-	value: ++value;
-}
- const result = obj.value + value
-// answer: NaN
+// }
+
+// console.log(solution('abcde', 'cde')); // true
+// console.log(solution('abcde', 'abc')); // false
+// console.log(solution('sumo', 'omo')); // false
