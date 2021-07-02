@@ -823,3 +823,35 @@ function countPositivesSumNegatives(input) {
 // console.log(solution('abcde', 'cde')); // true
 // console.log(solution('abcde', 'abc')); // false
 // console.log(solution('sumo', 'omo')); // false
+
+
+
+// xxxxxxxxxxxxxxFIBONACHIxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+// //* sum of fibonachi
+// function fibonachi(num) {
+//     let a = 1;
+//     let b = 1;
+//     for (i = 2; i < num; i++) {
+//         let c = a + b;
+//         a = b
+//         b = c
+//     }
+//     return b
+// }
+// console.log(fibonachi(10))
+
+
+// //* count of fibonachi
+// function fibonacci(num) {
+//     let res = [0, 1]
+
+//     for (let i = 1; res[i] <= num; i++) {
+//         res.push(res[i] + res[i - 1]);   // почему -1
+//     }
+//     console.log(res)
+// }
+// fibonacci(15)
+
+
