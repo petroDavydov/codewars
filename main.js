@@ -880,18 +880,18 @@ function countPositivesSumNegatives(input) {
 
 // ================================
 
-function sumOfMinimums(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i += 1) {
-    let minJ = Math.min.apply(null, arr[i]);
+// function sumOfMinimums(arr) {
+//   let total = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     let minJ = Math.min.apply(null, arr[i]);
 
-    total += minJ;
+//     total += minJ;
 
-    // }
-  }
-  // your code here
-  return total;
-}
+//     // }
+//   }
+//   // your code here
+//   return total;
+// }
 
 // console.log(
 //   sumOfMinimums([
@@ -909,23 +909,40 @@ function sumOfMinimums(arr) {
 //   ])
 // ); //76
 
-const matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
-let total = 0;
+// const matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// let total = 0;
 
-for (let i = 0; i < matrix.length; i += 1) {
-  console.log("Подмассив матрицы matrix[i]: ", matrix[i]);
+// for (let i = 0; i < matrix.length; i += 1) {
+//   console.log("Подмассив матрицы matrix[i]: ", matrix[i]);
 
-  for (let j = 0; j < matrix[i].length; j += 1) {
-    console.log("Элемент подмассива матрицы matrix[i][j]: ", matrix[i][j]);
-    total += matrix[i][j];
-  }
+//   for (let j = 0; j < matrix[i].length; j += 1) {
+//     console.log("Элемент подмассива матрицы matrix[i][j]: ", matrix[i][j]);
+//     total += matrix[i][j];
+//   }
+// }
+
+// console.log(total); // 45
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+//* Проверьте, есть ли в строке одинаковое количество символов «x» и «o». Метод должен возвращать логическое значение и не учитывать регистр. Строка может содержать любой символ.
+
+
+function XO(str) {
+
+ let first = str.split('')
+ console.log(first);
+    
 }
 
-console.log(total); // 45
-
-
-// console.log("train" || plan);
+// console.log(('xo')); //true
+console.log(("xxOo")); //true
+// console.log(("xxxm"));// false
+// console.log(("Oo"));// false
+// console.log(("ooom"));// false
