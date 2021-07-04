@@ -966,6 +966,190 @@
 //   console.log(typeof f);
 // }
 
-
-// alert(str); 
+// alert(str);
 //  var str = "Hello";
+
+//! xxxxxxxxxxxx Тести learn.javascript.ru xxxxxxxxxxxxx
+
+// №1
+// let obj = {
+//   "0": 1,
+//   0: 2,
+// };
+
+// console.log(obj["0"] + obj[0]);
+// answer:4
+
+// №2
+
+// let name = "Вася";
+// function sayHi() {
+//   console.log(name);
+// }
+
+// setTimeout(function() {
+//  let name = "Петя";
+//   sayHi();
+// }, 1000);
+// answer:Вася
+
+// №3
+
+// break me
+//aswer: Выходит из текущего блока цикла или switch на метку «me».
+
+// №4
+
+// let a=[1,2,3]
+// let b=[1,2,3]
+// console.log(a==b);
+// answer: Неправда.
+
+// #6
+
+// let a = (1, 5 - 1) * 2;
+// console.log(a);
+// answer:8
+// №7
+
+// let y = 1;
+// let x = (y = 2);
+// // console.log(y)
+// console.log(x);
+// answer:2
+
+// №8
+
+// let f = (function (x) {
+//   alert(x);
+// })(
+//   (function () {
+//     f(1);
+//   })()
+// );
+// answer:false
+
+// №9
+
+// function F() {
+//   return F;
+// }
+
+// console.log(new F() instanceof F);
+// console.log(new F() instanceof Function);
+// answer: false,true
+
+// №10
+
+// console.log(true + false);//1
+
+// №11
+
+// for(let i=0; i<10; i++) {
+// 	setTimeout(function() {
+// 	  alert(i);
+// 	}, 100);
+//   }
+
+// answer: 0-9
+
+// №12
+// +
+// №13
+
+// function MyArray() { }
+// MyArray.prototype = [];
+
+// let arr = new MyArray();
+// arr.push(1, 2, 3);
+// console.log(arr.length);
+// answer:3
+
+// №14
+// answer: different
+
+// №15
+// function User() {}
+// User.prototype = { admin: false };
+
+// let user = new User();
+// console.log(user.admin);
+
+// №16
+// let X = NaN;
+// let a = X;
+// console.log( a == X ); // false
+// answer: NaN
+
+// №17
+
+// console.log(null + {0:1}[0] + [,[1],][1][0]);
+// answer: 2
+
+// console.log(null);
+// // answer: null
+
+// console.log(null + {0:1});
+// // answwer: null[object Object]
+
+// console.log(null + {0:1}[0]);
+// // answer:1
+
+// console.log(null + {0:1}[0] + [[1]]);
+// // answer:11(string)
+
+// console.log(null + {0:1}[0] + [,[1]]);
+// // answer: 1,1(string)
+
+// console.log(null + {0:1}[0] + [,[1],]);
+// // answer: 1,1(string)
+
+// console.log(null + {0:1}[0] + [,[1],][1]);
+// // answer:11(string)
+
+// console.log(null + {0:1}[0] + [,[1],][1][0]);
+// // answer: 2
+
+//*
+// console.log(null=="0"); // false
+// console.log(null==0); // false
+// console.log(null===0); // false
+// console.log(null!==0); // true
+// console.log(null=="0"); // false
+// console.log(null="0"); // Invalid left-hand side in assignment
+// console.log(null=0); // Invalid left-hand side in assignment
+
+// №18
+
+// console.log(str);
+// let str = "Hello";
+
+// №19
+
+// function f() {
+//   let a = 5;
+//   return new Function("b", "return a + b");
+// }
+
+// console.log(f()(1));
+// // answer: ReferenceError
+
+// №20
+
+// function f() {
+// 	let a = 5;
+// 	return new Function('b', 'return a + b');
+//   }
+
+//   alert( f()(1) );
+
+//   answer: Будет ошибка
+
+// 21
+
+// Чему равно 0 || "" || 2 || undefined || true || falsе
+// answer: 2
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
