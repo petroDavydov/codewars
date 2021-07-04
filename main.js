@@ -20,25 +20,25 @@
 //*Example
 // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 
-function countPositivesSumNegatives(input) {
-  const answer = [];
+// function countPositivesSumNegatives(input) {
+//   const answer = [];
 
-  let pos = 0;
-  let neg = 0;
+//   let pos = 0;
+//   let neg = 0;
 
-  if (input && input.length) {
-    for (let i = 0; i < input.length; i += 1) {
-      if (input[i] > 0) {
-        pos += 1;
-      } else {
-        neg += input[i];
-      }
-    }
-    answer.push(pos);
-    answer.push(neg);
-  }
-  return answer;
-}
+//   if (input && input.length) {
+//     for (let i = 0; i < input.length; i += 1) {
+//       if (input[i] > 0) {
+//         pos += 1;
+//       } else {
+//         neg += input[i];
+//       }
+//     }
+//     answer.push(pos);
+//     answer.push(neg);
+//   }
+//   return answer;
+// }
 
 // //! reduce
 
@@ -923,26 +923,49 @@ function countPositivesSumNegatives(input) {
 //     console.log("Элемент подмассива матрицы matrix[i][j]: ", matrix[i][j]);
 //     total += matrix[i][j];
 //   }
-// }
 
 // console.log(total); // 45
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+// // Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
 
-//* Проверьте, есть ли в строке одинаковое количество символов «x» и «o». Метод должен возвращать логическое значение и не учитывать регистр. Строка может содержать любой символ.
+// //* Проверьте, есть ли в строке одинаковое количество символов «x» и «o». Метод должен возвращать логическое значение и не учитывать регистр. Строка может содержать любой символ.
+
+// function XO(str) {
+//   const x = [];
+//   const o = [];
+
+//   let first = str.toLowerCase().split("");
+//   //   console.log(first);
+
+//   for (let i = 0; i < first.length; i += 1) {
+//     // console.log(first[i]);
+
+//     if (first[i] === "x") {
+//       x.push(first[i]);
+//     } else if (first[i] === "o") {
+//       o.push(first[i]);
+//     }
+//   }
+//   return x.length === o.length ? true : false;
+// }
+
+// console.log(XO("xo")); //true
+// console.log(XO("xxOo")); //true
+// console.log(XO("xxxm")); // false
+// console.log(XO("Oo")); // false
+// console.log(XO("ooom")); // false
+
+// // console.log("Hello");
+
+// let foll = null + { 0: 1 }[0] + [, [1]][1][0];
+// console.log(foll);
+
+// if (function f() {}) {
+//   console.log(typeof f);
+// }
 
 
-function XO(str) {
-
- let first = str.split('')
- console.log(first);
-    
-}
-
-// console.log(('xo')); //true
-console.log(("xxOo")); //true
-// console.log(("xxxm"));// false
-// console.log(("Oo"));// false
-// console.log(("ooom"));// false
+// alert(str); 
+//  var str = "Hello";
