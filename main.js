@@ -1223,16 +1223,18 @@ console.log(solve("Code")); // "code";
 
 // Завершите функцию, которая принимает строковый параметр и переворачивает каждое слово в строке. Все пробелы в строке следует сохранить.
 
-function reverseWords(str) {
-  return str.split("").reverse().join("").split(" ").reverse().join(" ");
-}
-
-// 2 variant
 // function reverseWords(str) {
-// 	return str.split(' ').map(a => a.split('').reverse().join('')).join(' ')
-//   }
+//   return str.split("").reverse().join("").split(" ").reverse().join(" ");
+// }
 
-console.log(reverseWords("The quick brown fox jumps over the lazy dog.")); // 'ehT kciuq nworb xof spmuj revo eht yzal .god');
-console.log(reverseWords("apple")); //'elppa');
-console.log(reverseWords("a b c d")); // 'a b c d');
-console.log(reverseWords("double  spaced  words")); // 'elbuod  decaps  sdrow');
+// // 2 variant
+// // function reverseWords(str) {
+// // 	return str.split(' ').map(a => a.split('').reverse().join('')).join(' ')
+// //   }
+
+// console.log(reverseWords("The quick brown fox jumps over the lazy dog.")); // 'ehT kciuq nworb xof spmuj revo eht yzal .god');
+// console.log(reverseWords("apple")); //'elppa');
+// console.log(reverseWords("a b c d")); // 'a b c d');
+// console.log(reverseWords("double  spaced  words")); // 'elbuod  decaps  sdrow');
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
