@@ -1427,34 +1427,59 @@ function factorial(n) {
 
 console.log(factorial(5));
 
-
 // =====trottle & debonced===
 
 // HTML CSS JS Result Skip Results Iframe
 // Very simple example.
-// Probably you would want to use a 
+// Probably you would want to use a
 // full-featured plugin like
 // https://github.com/infinite-scroll/infinite-scroll/blob/master/jquery.infinitescroll.js
-$(document).ready(function(){
-  
+$(document).ready(function () {
   // Check every 300ms the scroll position
-  $(document).on('scroll', _.throttle(function(){
-    check_if_needs_more_content();
-  }, 300));
+  $(document).on(
+    "scroll",
+    _.throttle(function () {
+      check_if_needs_more_content();
+    }, 300)
+  );
 
-  function check_if_needs_more_content() {     
-    pixelsFromWindowBottomToBottom = 0 + $(document).height() - $(window).scrollTop() -$(window).height();
-    
-  // console.log($(document).height());
-  // console.log($(window).scrollTop());
-  // console.log($(window).height());
-  //console.log(pixelsFromWindowBottomToBottom);
-    
-    
-    if (pixelsFromWindowBottomToBottom < 200){
+  function check_if_needs_more_content() {
+    pixelsFromWindowBottomToBottom =
+      0 + $(document).height() - $(window).scrollTop() - $(window).height();
+
+    // console.log($(document).height());
+    // console.log($(window).scrollTop());
+    // console.log($(window).height());
+    //console.log(pixelsFromWindowBottomToBottom);
+
+    if (pixelsFromWindowBottomToBottom < 200) {
       // Here it would go an ajax request
-      $('body').append($('.item').clone()); 
-      
+      $("body").append($(".item").clone());
     }
   }
 });
+
+// ===============
+
+let object = { foo: 1, bar: 5, baz: 7 };
+let objNew = new Map(Object.entries(object));
+console.log(objNew);
+
+let one = { w: 2, r: 4, y: 6 };
+let resultObjactValue = Object.entries(one).forEach(([key, value]) =>
+  console.log(`${key} : ${value}`)
+);
+
+// const [a, , b] = [1, 2, 3];
+// console.log(a, b);
+
+let a = 1;
+let b = {
+  toString() {
+    return "1";
+  },
+};
+
+let c = 1;
+
+console.log(a + b + c);
