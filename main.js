@@ -1399,3 +1399,30 @@ console.log(isIsogram("")); // true, "an empty string is a valid isogram" );
 // console.log(isIsogram("Dermatoglyphics")); // true );
 // console.log(isIsogram("isIsogram")); // false );
 // console.log(isIsogram("")); // true, "an empty string is a valid isogram" );
+
+// function foo(arg1,...arg, arg2){
+// 	console.log(arg1,...arg, arg2);
+// }
+
+// ===Таблиця множення===
+let oneRow = "";
+function multiply() {
+  for (let i = 1; i <= 10; i += 1) {
+    for (let j = 0; j <= 10; j += 1) {
+      oneRow += j * i + " ";
+    }
+    console.log(i + " x");
+    console.log(oneRow);
+    oneRow = "";
+  }
+}
+
+multiply();
+
+// ===Factorial=============
+
+function factorial(n) {
+  return n != 1 ? n * factorial(n - 1) : 1;
+}
+
+console.log(factorial(5));
