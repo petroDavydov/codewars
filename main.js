@@ -1483,3 +1483,23 @@ let b = {
 let c = 1;
 
 console.log(a + b + c);
+// =========
+
+console.log(5 + "10");// 510
+console.log(5 + "-10");//5-10
+console.log("5" + 10 + "10");//51010
+console.log(-5 + "-10");//-5-10
+console.log(-5 - "-10"); //5
+console.log(5 - "-10");//15
+console.log(-5 - -10);//5
+console.log("-5" - "-10");//5
+console.log(true + false);//1
+console.log(true - false);//1
+console.log(true / false);//infinity
+console.log(true * false);//0
+console.log(true >= false);//true
+console.log(true <= false);//false
+// console.log(true = false);// Invalid left-hand side in assignment
+console.log(true == false);//false
+console.log(true === false);//false
+
