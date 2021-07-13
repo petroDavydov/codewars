@@ -1485,21 +1485,47 @@ let c = 1;
 console.log(a + b + c);
 // =========
 
-console.log(5 + "10");// 510
-console.log(5 + "-10");//5-10
-console.log("5" + 10 + "10");//51010
-console.log(-5 + "-10");//-5-10
+console.log(5 + "10"); // 510
+console.log(5 + "-10"); //5-10
+console.log("5" + 10 + "10"); //51010
+console.log(-5 + "-10"); //-5-10
 console.log(-5 - "-10"); //5
-console.log(5 - "-10");//15
-console.log(-5 - -10);//5
-console.log("-5" - "-10");//5
-console.log(true + false);//1
-console.log(true - false);//1
-console.log(true / false);//infinity
-console.log(true * false);//0
-console.log(true >= false);//true
-console.log(true <= false);//false
+console.log(5 - "-10"); //15
+console.log(-5 - -10); //5
+console.log("-5" - "-10"); //5
+console.log(true + false); //1
+console.log(true - false); //1
+console.log(true / false); //infinity
+console.log(true * false); //0
+console.log(true >= false); //true
+console.log(true <= false); //false
 // console.log(true = false);// Invalid left-hand side in assignment
-console.log(true == false);//false
-console.log(true === false);//false
+console.log(true == false); //false
+console.log(true === false); //false
+// ==========
+
+// тип значения Infinity
+console.log(typeof Infinity); // number
+
+// =======
+
+function myFunc() {
+  let a = (b = 33);
+}
+myFunc();//number
+console.log(b);//33
+// ============
+
+const Person = (name)=>{
+	this.name = name;
+}
+
+const man = new Person("SeniorFront");
+const result = man instanceof Person;
+console.log(result);
+
+// answer: стрелочние функции не используются в конструкторе
+
+// ====================
+
 
